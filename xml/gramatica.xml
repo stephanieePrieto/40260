@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE programa SYSTEM "programa.dtd">
+<programa nombre="EquivalenteJava">
+    <inicio mensaje="[LOG]: Programa arrancado." />
+    <definicion tipo="String" variable="usuario" valor="Stephanie" />   
+    <salida>
+        <mensaje>Bienvenida:</mensaje>
+        <variable nombre="usuario" />
+    </salida>   
+    <definicion tipo="int" variable="puntos" valor="100" />   
+    <entrada variable="extra">
+        <mensaje>Ingresa un valor extra para tu registro:</mensaje>
+    </entrada>   
+    <bloque nombre="Bloque de Operaciones">
+        <operacion tipo="suma" valor="50" />
+        <operacion tipo="resta" valor="10" />
+        <operacion tipo="multiplicacion" valor="2" />
+        <operacion tipo="division" valor="4" />
+    </bloque> 
+    <salida>
+        <mensaje>El resultado de las operaciones es:</mensaje>
+        <variable nombre="puntos" />
+    </salida> 
+    <fin mensaje="[LOG]: Programa terminado." />
+</programa>

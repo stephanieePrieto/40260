@@ -1,0 +1,24 @@
+<!ELEMENT programa (inicio, (definicion | salida | entrada | bloque)*, fin)>
+<!ATTLIST programa nombre NMTOKEN #REQUIRED>
+<!ELEMENT inicio EMPTY>
+<!ATTLIST inicio mensaje CDATA #REQUIRED>
+<!ELEMENT definicion EMPTY>
+<!ATTLIST definicion 
+    tipo (String | int) #REQUIRED
+    variable ID #REQUIRED
+    valor CDATA #REQUIRED>
+<!ELEMENT salida (mensaje | variable)*>
+<!ELEMENT mensaje (#PCDATA)>
+<!ELEMENT variable EMPTY>
+<!ATTLIST variable nombre CDATA #REQUIRED>
+<!ELEMENT entrada (mensaje)>
+<!ATTLIST entrada variable CDATA #REQUIRED>
+<!ELEMENT bloque (operacion+)>
+<!ATTLIST bloque nombre CDATA #IMPLIED>
+<!ELEMENT operacion EMPTY>
+<!ATTLIST operacion 
+    tipo (suma | resta | multiplicacion | division) #REQUIRED
+    valor CDATA #REQUIRED>
+
+<!ELEMENT fin EMPTY>
+<!ATTLIST fin mensaje CDATA #REQUIRED>
